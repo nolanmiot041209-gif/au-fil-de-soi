@@ -1,17 +1,626 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Au fil de soi — Head Spa Japonais de Luxe</title>
-    <meta name="description" content="Au fil de soi — Votre sanctuaire de bien-être. Head spa japonais, soins du cuir chevelu, relaxation profonde. Réservez votre moment de sérénité." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Au fil de soi - head spa japonais, bien-etre et relaxation." />
+    <title>Au fil de soi | Head spa</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="Au fil de soi - accueil">
+        <span class="logo-shell" data-logo-shell>
+          <img data-logo alt="Logo Au fil de soi" />
+          <span data-logo-fallback>Au fil<br />de soi</span>
+        </span>
+        <span class="brand-text">
+          <strong>Au fil de soi</strong>
+          <small data-brand-subtitle>Head Spa</small>
+        </span>
+      </a>
+      <button class="menu-button" type="button" data-menu-button aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" data-nav>
+        <a href="#presentation" data-nav-label="presentation">A propos</a>
+        <a href="#services" data-nav-label="services">Soins</a>
+        <a href="#galerie" data-nav-label="gallery">Galerie</a>
+        <a href="#avis" data-nav-label="reviews">Avis</a>
+        <a href="#reservation" data-nav-label="booking">Reservation</a>
+        <a href="#contact" data-nav-label="contact">Contact</a>
+        <a class="book-pill" href="#reservation" data-nav-label="book">Reserver</a>
+        <button class="link-button" type="button" data-open-admin data-nav-label="admin">Admin</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="accueil">
+        <div class="hero-media" data-hero-media></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="ornamented-eyebrow">
+            <span></span>
+            <p class="eyebrow" data-hero-kicker>Head Spa Japonais</p>
+            <span></span>
+          </div>
+          <h1 data-hero-title>Au fil de soi</h1>
+          <div class="gold-divider"></div>
+          <p data-hero-subtitle></p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#reservation" data-hero-cta>Prendre rendez-vous</a>
+            <a class="secondary-ghost" href="#presentation" data-hero-secondary>Decouvrir</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#presentation" aria-label="Descendre">⌄</a>
+      </section>
+
+      <section class="section intro-section" id="presentation">
+        <div class="section-heading centered intro-heading">
+          <p class="eyebrow" data-presentation-kicker>Notre histoire</p>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+        </div>
+        <div class="about-layout">
+          <div class="about-visual">
+            <img data-presentation-image alt="" />
+            <div class="about-badge">
+              <small data-presentation-feature-label></small>
+              <strong data-presentation-feature-text></strong>
+            </div>
+          </div>
+          <div class="section-copy">
+            <h2 data-presentation-title></h2>
+            <div class="copy-block" data-presentation-body></div>
+            <a class="text-action" href="#reservation">Reserver un soin</a>
+          </div>
+        </div>
+        <div class="values" data-values></div>
+      </section>
+
+      <section class="section services-section" id="services">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-services-kicker>Nos soins</p>
+          <h2 data-services-title></h2>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+          <p data-services-intro></p>
+        </div>
+        <div class="services-grid" data-services-grid></div>
+        <div class="service-footer">
+          <p data-services-note></p>
+          <a class="secondary-ghost dark" href="#contact" data-services-cta></a>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="galerie">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-gallery-kicker>Galerie</p>
+          <h2 data-gallery-title>Notre univers</h2>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+        </div>
+        <div class="gallery-grid" data-gallery></div>
+      </section>
+
+      <section class="section video-section" id="video">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-video-kicker>En images</p>
+          <h2 data-video-title></h2>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+          <p data-video-caption></p>
+        </div>
+        <div class="video-frame" data-video-frame></div>
+      </section>
+
+      <section class="section reviews-section" id="avis">
+        <div class="section-heading centered">
+          <p class="eyebrow" data-reviews-kicker>Retours clients</p>
+          <h2 data-reviews-title>Avis</h2>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+        </div>
+        <div class="reviews-grid" data-reviews></div>
+      </section>
+
+      <section class="section booking-section" id="reservation">
+        <div class="section-heading centered booking-heading">
+          <p class="eyebrow" data-booking-kicker>Rendez-vous</p>
+          <h2 data-booking-title>Reservez votre soin</h2>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+          <p data-booking-intro></p>
+        </div>
+        <div class="booking-workspace">
+          <div class="calendar-panel">
+            <label class="field compact">
+              <span data-booking-date-label>Date</span>
+              <input type="date" data-booking-date />
+            </label>
+            <div class="slot-grid" data-slot-grid></div>
+          </div>
+          <form class="booking-form" data-booking-form>
+            <input type="hidden" data-booking-time />
+            <div class="selected-slot" data-selected-slot>Aucun creneau selectionne</div>
+            <label class="field">
+              <span>Nom</span>
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" />
+            </label>
+            <label class="field">
+              <span>Telephone</span>
+              <input name="phone" autocomplete="tel" />
+            </label>
+            <label class="field">
+              <span>Soin</span>
+              <select name="service" data-service-select></select>
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="notes" rows="3"></textarea>
+            </label>
+            <button class="primary-action full" type="submit" data-booking-submit>Confirmer la demande</button>
+            <p class="form-status" data-booking-status role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-heading centered contact-heading">
+          <p class="eyebrow" data-contact-kicker>Nous joindre</p>
+          <h2 data-contact-title>Contactez-nous</h2>
+          <div class="divider-row"><span></span><i></i><span></span></div>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-card">
+            <h3>Au fil de soi</h3>
+            <p data-contact-intro></p>
+            <p data-contact-address></p>
+            <a class="call-button" data-contact-phone href="#">Appeler</a>
+          </div>
+          <form class="contact-form" data-contact-form>
+            <h3 data-contact-form-title>Envoyez-nous un message</h3>
+            <label class="field">
+              <span>Nom</span>
+              <input name="name" required />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input name="email" type="email" required />
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="secondary-action" type="submit" data-contact-submit>Envoyer</button>
+            <p class="form-status" data-contact-status role="status"></p>
+          </form>
+          <iframe class="map" data-map title="Carte Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Au fil de soi</strong>
+        <span data-footer-subtitle>Head Spa</span>
+      </div>
+      <nav>
+        <a href="#presentation">A propos</a>
+        <a href="#services">Soins</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </footer>
+
+    <div class="admin-drawer" data-admin-drawer aria-hidden="true">
+      <div class="admin-backdrop" data-close-admin></div>
+      <aside class="admin-panel" aria-label="Administration">
+        <div class="admin-topbar">
+          <div>
+            <p class="eyebrow">Mode admin</p>
+            <h2>Gestion du site</h2>
+          </div>
+          <button class="icon-button" type="button" data-close-admin aria-label="Fermer">x</button>
+        </div>
+
+        <form class="login-box" data-login-form>
+          <label class="field">
+            <span>Email autorise</span>
+            <input name="email" type="email" autocomplete="username" value="admin@aufildesoi.fr" required />
+          </label>
+          <label class="field">
+            <span>Mot de passe</span>
+            <input name="password" type="password" autocomplete="current-password" required />
+          </label>
+          <button class="primary-action full" type="submit">Se connecter</button>
+          <p class="form-status" data-login-status role="status"></p>
+        </form>
+
+        <div class="admin-workspace" data-admin-workspace hidden>
+          <div class="admin-session">
+            <span data-admin-email></span>
+            <button class="link-button" type="button" data-logout>Deconnexion</button>
+          </div>
+          <div class="admin-tabs" data-admin-tabs>
+            <button class="is-active" type="button" data-tab="content">Contenu</button>
+            <button type="button" data-tab="media">Medias</button>
+            <button type="button" data-tab="reviews">Avis</button>
+            <button type="button" data-tab="appointments">Rendez-vous</button>
+            <button type="button" data-tab="availability">Dispos</button>
+            <button type="button" data-tab="stats">Stats</button>
+            <button type="button" data-tab="advanced">Avance</button>
+            <button type="button" data-tab="security">Securite</button>
+          </div>
+          <section class="admin-tab is-active" data-tab-panel="content">
+            <div class="admin-grid">
+              <label class="field">
+                <span>Titre hero</span>
+                <input data-edit="hero.title" />
+              </label>
+              <label class="field">
+                <span>Accroche hero</span>
+                <input data-edit="hero.kicker" />
+              </label>
+              <label class="field">
+                <span>Sous-titre marque</span>
+                <input data-edit="brandSubtitle" />
+              </label>
+              <label class="field">
+                <span>Bouton principal</span>
+                <input data-edit="hero.cta" />
+              </label>
+              <label class="field">
+                <span>Bouton secondaire</span>
+                <input data-edit="hero.secondaryCta" />
+              </label>
+              <label class="field wide">
+                <span>Texte hero</span>
+                <textarea data-edit="hero.subtitle" rows="3"></textarea>
+              </label>
+              <label class="field">
+                <span>Navigation presentation</span>
+                <input data-edit="nav.presentation" />
+              </label>
+              <label class="field">
+                <span>Navigation soins</span>
+                <input data-edit="nav.services" />
+              </label>
+              <label class="field">
+                <span>Navigation galerie</span>
+                <input data-edit="nav.gallery" />
+              </label>
+              <label class="field">
+                <span>Navigation reservation</span>
+                <input data-edit="nav.booking" />
+              </label>
+              <label class="field">
+                <span>Navigation avis</span>
+                <input data-edit="nav.reviews" />
+              </label>
+              <label class="field">
+                <span>Navigation contact</span>
+                <input data-edit="nav.contact" />
+              </label>
+              <label class="field">
+                <span>Bouton nav reserver</span>
+                <input data-edit="nav.book" />
+              </label>
+              <label class="field">
+                <span>Bouton nav admin</span>
+                <input data-edit="nav.admin" />
+              </label>
+              <label class="field">
+                <span>Accroche presentation</span>
+                <input data-edit="presentation.kicker" />
+              </label>
+              <label class="field">
+                <span>Titre presentation</span>
+                <input data-edit="presentation.title" />
+              </label>
+              <label class="field wide">
+                <span>Presentation</span>
+                <textarea data-edit="presentation.body" rows="6"></textarea>
+              </label>
+              <label class="field">
+                <span>Label badge presentation</span>
+                <input data-edit="presentation.featureLabel" />
+              </label>
+              <label class="field">
+                <span>Texte badge presentation</span>
+                <input data-edit="presentation.featureText" />
+              </label>
+              <div class="wide">
+                <h3>Valeurs</h3>
+                <div class="admin-list" data-values-admin></div>
+              </div>
+              <div class="wide">
+                <h3>Prestations</h3>
+                <form class="inline-form" data-service-form>
+                  <input name="name" placeholder="Nom de la prestation" required />
+                  <input name="duration" type="number" min="15" max="240" step="15" value="60" required />
+                  <input name="price" placeholder="Prix" />
+                  <input name="description" placeholder="Description" />
+                  <button class="secondary-action" type="submit">Ajouter</button>
+                </form>
+                <div class="admin-list" data-service-admin></div>
+              </div>
+              <label class="field">
+                <span>Titre section soins</span>
+                <input data-edit="sections.services.title" />
+              </label>
+              <label class="field">
+                <span>Accroche section soins</span>
+                <input data-edit="sections.services.kicker" />
+              </label>
+              <label class="field">
+                <span>Intro section soins</span>
+                <input data-edit="sections.services.intro" />
+              </label>
+              <label class="field">
+                <span>Note bas section soins</span>
+                <input data-edit="sections.services.customNote" />
+              </label>
+              <label class="field">
+                <span>Bouton bas section soins</span>
+                <input data-edit="sections.services.customCta" />
+              </label>
+              <label class="field">
+                <span>Titre galerie</span>
+                <input data-edit="sections.gallery.title" />
+              </label>
+              <label class="field">
+                <span>Accroche galerie</span>
+                <input data-edit="sections.gallery.kicker" />
+              </label>
+              <label class="field">
+                <span>Accroche avis</span>
+                <input data-edit="sections.reviews.kicker" />
+              </label>
+              <label class="field">
+                <span>Titre avis</span>
+                <input data-edit="sections.reviews.title" />
+              </label>
+              <label class="field">
+                <span>Texte avis vide</span>
+                <input data-edit="sections.reviews.empty" />
+              </label>
+              <label class="field">
+                <span>Accroche reservation</span>
+                <input data-edit="sections.booking.kicker" />
+              </label>
+              <label class="field">
+                <span>Titre reservation</span>
+                <input data-edit="sections.booking.title" />
+              </label>
+              <label class="field">
+                <span>Label date reservation</span>
+                <input data-edit="sections.booking.dateLabel" />
+              </label>
+              <label class="field">
+                <span>Bouton reservation</span>
+                <input data-edit="sections.booking.submitLabel" />
+              </label>
+              <label class="field">
+                <span>Message sans selection</span>
+                <input data-edit="sections.booking.noSelectedSlot" />
+              </label>
+              <label class="field">
+                <span>Message aucun creneau</span>
+                <input data-edit="sections.booking.noSlot" />
+              </label>
+              <label class="field">
+                <span>Message confirmation reservation</span>
+                <input data-edit="sections.booking.success" />
+              </label>
+              <label class="field wide">
+                <span>Intro reservation</span>
+                <textarea data-edit="sections.booking.intro" rows="2"></textarea>
+              </label>
+              <label class="field">
+                <span>Accroche contact</span>
+                <input data-edit="sections.contact.kicker" />
+              </label>
+              <label class="field">
+                <span>Titre contact</span>
+                <input data-edit="sections.contact.title" />
+              </label>
+              <label class="field">
+                <span>Titre formulaire contact</span>
+                <input data-edit="sections.contact.formTitle" />
+              </label>
+              <label class="field">
+                <span>Bouton appel</span>
+                <input data-edit="sections.contact.callLabel" />
+              </label>
+              <label class="field">
+                <span>Bouton formulaire contact</span>
+                <input data-edit="sections.contact.submitLabel" />
+              </label>
+              <label class="field">
+                <span>Message confirmation contact</span>
+                <input data-edit="sections.contact.success" />
+              </label>
+              <label class="field wide">
+                <span>Intro contact</span>
+                <textarea data-edit="sections.contact.intro" rows="2"></textarea>
+              </label>
+              <label class="field">
+                <span>Telephone</span>
+                <input data-edit="contact.phone" />
+              </label>
+              <label class="field">
+                <span>Email contact</span>
+                <input data-edit="contact.email" />
+              </label>
+              <label class="field wide">
+                <span>Adresse</span>
+                <input data-edit="contact.address" />
+              </label>
+              <label class="field wide">
+                <span>URL Google Maps embed</span>
+                <input data-edit="contact.mapEmbedUrl" />
+              </label>
+            </div>
+            <p class="form-status" data-admin-status role="status"></p>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="media">
+            <div class="drop-grid">
+              <div class="drop-zone" data-drop="logo">
+                <strong>Logo</strong>
+                <span>Glissez une image ici ou cliquez pour choisir</span>
+              </div>
+              <div class="drop-zone" data-drop="hero">
+                <strong>Image ou video hero</strong>
+                <span>Glissez un media ici ou cliquez pour choisir</span>
+              </div>
+              <div class="drop-zone" data-drop="presentation">
+                <strong>Image presentation</strong>
+                <span>Glissez une image ici ou cliquez pour choisir</span>
+              </div>
+              <div class="drop-zone" data-drop="gallery">
+                <strong>Galerie</strong>
+                <span>Ajoutez une ou plusieurs images</span>
+              </div>
+              <div class="drop-zone" data-drop="video">
+                <strong>Video</strong>
+                <span>Glissez une video ici ou cliquez pour choisir</span>
+              </div>
+            </div>
+            <label class="field">
+              <span>Lien video externe</span>
+              <input data-edit="video.link" placeholder="https://..." />
+            </label>
+            <label class="field">
+              <span>Titre video</span>
+              <input data-edit="sections.video.title" />
+            </label>
+            <label class="field">
+              <span>Legende video</span>
+              <input data-edit="sections.video.caption" />
+            </label>
+            <div class="media-list" data-gallery-admin></div>
+            <p class="form-status" data-media-status role="status"></p>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="reviews">
+            <form class="inline-form" data-review-form>
+              <input name="name" placeholder="Nom" required />
+              <input name="note" type="number" min="1" max="5" value="5" required />
+              <input name="comment" placeholder="Commentaire" required />
+              <button class="secondary-action" type="submit">Ajouter</button>
+            </form>
+            <div class="admin-list" data-review-admin></div>
+            <p class="form-status" data-review-status role="status"></p>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="appointments">
+            <form class="appointment-editor" data-appointment-form>
+              <input name="id" type="hidden" />
+              <input name="name" placeholder="Nom" required />
+              <input name="email" type="email" placeholder="Email" />
+              <input name="phone" placeholder="Telephone" />
+              <input name="service" placeholder="Soin" />
+              <input name="date" type="date" required />
+              <input name="time" type="time" required />
+              <input name="notes" placeholder="Note interne" />
+              <button class="primary-action" type="submit">Enregistrer le rendez-vous</button>
+            </form>
+            <div class="table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Contact</th>
+                    <th>Soin</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody data-appointments-admin></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="availability">
+            <div class="admin-grid">
+              <label class="field">
+                <span>Ouverture</span>
+                <input data-edit="availability.start" type="time" />
+              </label>
+              <label class="field">
+                <span>Fermeture</span>
+                <input data-edit="availability.end" type="time" />
+              </label>
+              <label class="field">
+                <span>Duree creneau</span>
+                <select data-edit="availability.slotMinutes">
+                  <option value="30">30 min</option>
+                  <option value="45">45 min</option>
+                  <option value="60">60 min</option>
+                  <option value="75">75 min</option>
+                  <option value="90">90 min</option>
+                  <option value="120">120 min</option>
+                </select>
+              </label>
+              <label class="field wide">
+                <span>Jours ouverts</span>
+                <div class="day-picker" data-day-picker></div>
+              </label>
+            </div>
+            <form class="inline-form" data-block-form>
+              <input name="date" type="date" required />
+              <input name="time" type="time" required />
+              <input name="reason" placeholder="Motif interne" />
+              <button class="secondary-action" type="submit">Bloquer</button>
+            </form>
+            <div class="admin-list" data-blocked-admin></div>
+            <p class="form-status" data-availability-status role="status"></p>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="stats">
+            <div class="stats-grid" data-stats></div>
+            <div class="chart" data-chart></div>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="advanced">
+            <p class="admin-help">Edition complete de la configuration publique du site. Toute modification valide ici est visible apres enregistrement.</p>
+            <label class="field">
+              <span>Configuration JSON complete</span>
+              <textarea data-advanced-json rows="22" spellcheck="false"></textarea>
+            </label>
+            <button class="primary-action" type="button" data-save-advanced>Verifier et sauvegarder ce JSON</button>
+            <p class="form-status" data-advanced-status role="status"></p>
+          </section>
+
+          <section class="admin-tab" data-tab-panel="security">
+            <form class="security-form" data-security-form>
+              <label class="field">
+                <span>Email autorise</span>
+                <input name="email" type="email" required />
+              </label>
+              <label class="field">
+                <span>Mot de passe actuel</span>
+                <input name="currentPassword" type="password" required />
+              </label>
+              <label class="field">
+                <span>Nouveau mot de passe</span>
+                <input name="nextPassword" type="password" minlength="10" placeholder="10 caracteres minimum" />
+              </label>
+              <button class="primary-action" type="submit">Mettre a jour</button>
+              <p class="form-status" data-security-status role="status"></p>
+            </form>
+          </section>
+          <div class="admin-save-bar" data-admin-save-bar>
+            <div>
+              <strong data-save-state>Tout est sauvegarde</strong>
+              <span data-save-hint>Les changements du contenu seront conserves apres sauvegarde.</span>
+            </div>
+            <button class="primary-action" type="button" data-global-save>Sauvegarder les modifications</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="/app.js" defer></script>
   </body>
 </html>
